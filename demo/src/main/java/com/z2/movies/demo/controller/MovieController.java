@@ -27,10 +27,9 @@ public class MovieController {
         return "success!";
     }
 
-    @PutMapping(path = "/{movieId}")
-    public String update(@PathVariable("movieId") int movieID, @RequestParam(required = true) String genre) {
-
-        movieService.updateMovie(movieID, genre);
+    @PutMapping(path = "/update")
+    public String update(@RequestBody Movie movie) {
+        movieService.updateMovie(movie);
         return "success!";
     }
 

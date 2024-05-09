@@ -24,12 +24,8 @@ public class MovieServiceImpl implements MovieService {
     }
 
     @Override
-    public void updateMovie(int movieId, String Genre) {
-        //find the movie
-        Movie movie = movieRepository.findById(movieId).orElseThrow(() -> new IllegalArgumentException("Movie not found"));
-
-        movie.setGenre(Genre);
-        movieRepository.save(movie);
+    public Movie updateMovie(Movie movie) {
+        return movieRepository.save(movie);
     }
 
     @Override

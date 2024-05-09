@@ -9,7 +9,7 @@ public interface MovieService {
     public Movie addMovie(Movie movie);
 
     //update genre in one Movie
-    public void updateMovie(int movieId, String Genre);
+    public Movie updateMovie(Movie movie);
 
     //delete a movie by id
     public void deleteMovie(int movieId);
