@@ -31,4 +31,10 @@ public class MovieServiceImpl implements MovieService {
         movie.setGenre(Genre);
         movieRepository.save(movie);
     }
+
+    @Override
+    public void deleteMovie(int movieId) {
+        movieRepository.findById(movieId).orElseThrow(() -> new IllegalArgumentException("Movie not found"));
+        movieRepository.deleteById(movieId);
+    }
 }
