@@ -22,4 +22,13 @@ public class MovieServiceImpl implements MovieService {
     public Movie addMovie(Movie movie) {
         return movieRepository.save(movie);
     }
+
+    @Override
+    public void updateMovie(int movieId, String Genre) {
+        //find the movie
+        Movie movie = movieRepository.findById(movieId).orElseThrow(() -> new IllegalArgumentException("Movie not found"));
+
+        movie.setGenre(Genre);
+        movieRepository.save(movie);
+    }
 }

@@ -7,4 +7,7 @@ import java.util.List;
 public interface MovieService {
     public List<Movie> getMovies();
     public Movie addMovie(Movie movie);
+
+    //update genre in one Movie
+    public void updateMovie(int movieId, String Genre);
 }
