@@ -33,4 +33,10 @@ public class MovieController {
         movieService.updateMovie(movieID, genre);
         return "success!";
     }
+
+    @DeleteMapping(path = "/{movieId}")
+    public String delete(@PathVariable("movieId") int movieID) {
+        movieService.deleteMovie(movieID);
+        return "success!";
+    }
 }
