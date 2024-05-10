@@ -16,6 +16,15 @@ public class Movie {
     private String language;
     private String country;
     private String director;
+    private String localPath;
+
+    public String getLocalPath() {
+        return localPath;
+    }
+
+    public void setLocalPath(String localPath) {
+        this.localPath = localPath;
+    }
 
     public Movie() {
     }
@@ -76,16 +85,5 @@ public class Movie {
         this.director = director;
     }
 
-    @Override
-    public String toString() {
-        return "Movie{" +
-                "id=" + id +
-                ", title='" + title + '\'' +
-                ", genre='" + genre + '\'' +
-                ", year=" + year +
-                ", language='" + language + '\'' +
-                ", country='" + country + '\'' +
-                ", director='" + director + '\'' +
-                '}';
-    }
+
 }
