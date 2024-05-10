@@ -50,4 +50,11 @@ public class MovieController {
         movieService.deleteMovie(movieID);
         return "success!";
     }
+
+    @DeleteMapping("/delete/all")
+    public String deleteAll() {
+        movieRepository.deleteAll();
+
+        return "success!";
+    }
 }
