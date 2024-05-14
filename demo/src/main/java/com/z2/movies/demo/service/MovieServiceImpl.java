@@ -23,6 +23,7 @@ public class MovieServiceImpl implements MovieService {
         return movieRepository.save(movie);
     }
 
+    //when you update one, you need to add the id in the json raw
     @Override
     public Movie updateMovie(Movie movie) {
         return movieRepository.save(movie);

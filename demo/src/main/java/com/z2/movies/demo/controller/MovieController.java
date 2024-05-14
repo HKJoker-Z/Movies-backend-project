@@ -27,12 +27,13 @@ public class MovieController {
     }
 
     // find a movie by genre
-    @GetMapping("/{genre}")
-    public List<Movie> getMovieByGenre(@PathVariable("genre") String genre) {
-        List<Movie> movie = movieRepository.findByGenre(genre);
-
-        return movie;
-    }
+    //it's useless now 5/14
+//    @GetMapping("/{genre}")
+//    public List<Movie> getMovieByGenre(@PathVariable("genre") String genre) {
+//        List<Movie> movie = movieRepository.findByGenre(genre);
+//
+//        return movie;
+//    }
 
     @PostMapping("/add")
     public String add(@RequestBody Movie movie) {
@@ -46,7 +47,7 @@ public class MovieController {
         return "success!";
     }
 
-    @DeleteMapping(path = "/{movieId}")
+    @DeleteMapping(path = "/delete/{movieId}")
     public String delete(@PathVariable("movieId") int movieID) {
         movieService.deleteMovie(movieID);
         return "success!";
