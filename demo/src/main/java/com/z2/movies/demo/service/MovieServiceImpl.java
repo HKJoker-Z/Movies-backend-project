@@ -34,4 +34,10 @@ public class MovieServiceImpl implements MovieService {
         movieRepository.findById(movieId).orElseThrow(() -> new IllegalArgumentException("Movie not found"));
         movieRepository.deleteById(movieId);
     }
+
+    @Override
+    public Movie getMovieById(int movieId) {
+        Movie movie = movieRepository.findById(movieId).orElseThrow(() -> new IllegalArgumentException("Movie not found"));
+        return movie;
+    }
 }

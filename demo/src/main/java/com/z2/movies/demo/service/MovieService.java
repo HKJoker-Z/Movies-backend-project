@@ -14,4 +14,7 @@ public interface MovieService {
     //delete a movie by id
     public void deleteMovie(int movieId);
 
+    //get a movie by movieId
+    public Movie getMovieById(int movieId);
+
 }

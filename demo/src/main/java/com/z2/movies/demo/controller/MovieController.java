@@ -26,6 +26,11 @@ public class MovieController {
         return movieService.getMovies();
     }
 
+    @GetMapping("/movies/{movieId}")
+    public Movie getMovieById(@PathVariable int movieId) {
+        return movieService.getMovieById(movieId);
+    }
+
     // find a movie by genre
     //it's useless now 5/14
 //    @GetMapping("/{genre}")
